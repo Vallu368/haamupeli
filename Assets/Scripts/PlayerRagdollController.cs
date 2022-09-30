@@ -21,5 +21,17 @@ public class PlayerRagdollController : MonoBehaviour
             Debug.Log("moving forward");
             hips.AddForce(hips.transform.forward * speed);
         }
+        if (Input.GetKey(KeyCode.A))
+        {
+            hips.AddForce(-hips.transform.right * strafeSpeed);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            hips.AddForce(hips.transform.right * strafeSpeed);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            hips.AddForce(-hips.transform.forward * speed);
+        }
     }
 }
