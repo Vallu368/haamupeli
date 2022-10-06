@@ -33,5 +33,13 @@ public class PlayerRagdollController : MonoBehaviour
         {
             hips.AddForce(-hips.transform.forward * speed);
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (isGrounded)
+            {
+                hips.AddForce(new Vector3(0, jumpForce, 0));
+                isGrounded = false;
+            }
+        }
     }
 }
