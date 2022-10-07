@@ -24,15 +24,6 @@ public class PlayerRagdollController : MonoBehaviour
         }
         else anim.SetBool("walking", false);
         moving = false;
-        if (Input.GetMouseButton(0))
-        {
-            anim.SetBool("LeftHandUp", true);
-        } else anim.SetBool("LeftHandUp", false);
-        if (Input.GetMouseButton(1))
-        {
-            anim.SetBool("RightHandUp", true);
-        }
-        else anim.SetBool("RightHandUp", false);
         if (Input.GetKey(KeyCode.W))
         {
             hips.AddForce(hips.transform.forward * speed);
