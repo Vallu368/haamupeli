@@ -9,9 +9,8 @@ public class CameraControl : MonoBehaviour
 
     float mouseX, mouseY;
 
-    public float stomachOffset;
 
-    public ConfigurableJoint hipJoint, stomachJoint;
+    public ConfigurableJoint hipJoint;
 
     private void Start()
     {
@@ -33,7 +32,5 @@ public class CameraControl : MonoBehaviour
 
         root.rotation = rootRotation;
 
-        hipJoint.targetRotation = Quaternion.Euler(0, -mouseX, 0);
-        stomachJoint.targetRotation = Quaternion.Euler(-mouseY + stomachOffset, 0, 0 );
-    }
+        hipJoint.targetRotation = Quaternion.Euler(0, -mouseX, 0);    }
 }
