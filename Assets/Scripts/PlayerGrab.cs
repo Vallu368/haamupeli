@@ -19,7 +19,7 @@ public class PlayerGrab : MonoBehaviour
     {
         if (!grabbing)
         {
-            Debug.Log("NOT GRAB");
+            
             if (grabbedObj != null)
             {
                 Destroy(grabbedObj.GetComponent<FixedJoint>());
