@@ -18,6 +18,7 @@ public class GrandpaMovement : MonoBehaviour
     public bool moving;
     public int playerInSight;
     public bool playerDetected = false;
+    public AudioSource death;
 
     private void Start()
     {
@@ -60,13 +61,22 @@ public class GrandpaMovement : MonoBehaviour
         }
         if (fov.canSeePlayer && playerDetected) //game over if he sees player for 5 seconds
         {
+            moving = false;
             grandpa.ResetGrandpa();
             grandpa.canThink = false;
             transform.LookAt(fov.player.transform);
+            death.Play();
+            Debug.Log("deth");
             
+        }
+        if (Input.GetKey(KeyCode.H))
+        {
+            Debug.Log("yoda");
+            death.Play();
         }
 
     }
+    
     void UpdateEverySecond()
     {
         if (fov.canSeePlayer)
