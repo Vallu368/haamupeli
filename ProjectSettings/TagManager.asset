@@ -15,8 +15,8 @@ TagManager:
   - 
   - 
   - noselfcollision
-  - 
-  - 
+  - Target
+  - Obstruction
   - 
   - 
   - 
