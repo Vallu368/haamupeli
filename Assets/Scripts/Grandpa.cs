@@ -12,12 +12,11 @@ public class Grandpa : MonoBehaviour
     public int random;
     public bool canThink;
     public Animator anim;
-
+    public bool hasTurned;
     private int nextUpdate = 1;
 
     void Start()
     {
-        ResetGrandpa();
         movement = this.GetComponent<GrandpaMovement>();
         fov = this.GetComponent<FieldOfView>();
         anim = this.GetComponent<Animator>();
@@ -38,11 +37,19 @@ public class Grandpa : MonoBehaviour
         }
         if (random == 1)
         {
-            grandpaWantsTo = "Walk";
+            if (hasTurned)
+            {
+                grandpaWantsTo = "Walk";
+            }
+            else random = 4;
         }
         if (random == 2)
         {
             grandpaWantsTo = "Dance";
+        }
+        if (random == 4)
+        {
+            grandpaWantsTo = "Turn";
         }
         if (grandpaThinking >= 5)
         {
@@ -61,6 +68,7 @@ public class Grandpa : MonoBehaviour
             movement.moving = true;
             canThink = false;
         }
+
         
         
     }
@@ -72,14 +80,16 @@ public class Grandpa : MonoBehaviour
         }
         if (action)
         {
-            random = Random.Range(0, 2);
+            random = Random.Range(1, 2);
             grandpaThinking = 0;
             
         }
     }
     public void ResetGrandpa()
     {
+        //resetting grandpa
         random = 0;
+        hasTurned = false;
         canThink = true;
     }
 

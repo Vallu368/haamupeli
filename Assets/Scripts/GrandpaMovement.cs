@@ -19,6 +19,7 @@ public class GrandpaMovement : MonoBehaviour
     public int playerInSight;
     public bool playerDetected = false;
     public AudioSource death;
+    public bool canTurn = false;
 
     private void Start()
     {
@@ -27,11 +28,13 @@ public class GrandpaMovement : MonoBehaviour
         transform.LookAt(waypoints[waypointIndex].position);
         grandpa = this.GetComponent<Grandpa>();
         fov = this.GetComponent<FieldOfView>();
+
         
     }
 
     private void Update()
     {
+
         if (Time.time >= nextUpdate)
         {
 
@@ -45,11 +48,14 @@ public class GrandpaMovement : MonoBehaviour
             Randomize();
             grandpa.ResetGrandpa();
             moving = false;
+            canTurn = false;
+            
         }
         else atPoint = false;
         if (moving)
         {
             Patrol();
+            
         }
         if (!fov.canSeePlayer)
         {
@@ -65,8 +71,8 @@ public class GrandpaMovement : MonoBehaviour
             grandpa.ResetGrandpa();
             grandpa.canThink = false;
             transform.LookAt(fov.player.transform);
-            death.Play();
-            Debug.Log("deth");
+            
+            
             
         }
         if (Input.GetKey(KeyCode.H))
@@ -74,9 +80,20 @@ public class GrandpaMovement : MonoBehaviour
             Debug.Log("yoda");
             death.Play();
         }
+        if (grandpa.grandpaWantsTo == "Turn")
+        {
+            var targetRotation = Quaternion.LookRotation(waypoints[waypointIndex].transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+            if (transform.rotation == targetRotation)
+            {
+                grandpa.hasTurned = true;
+            }
+        }
+
+
 
     }
-    
+
     void UpdateEverySecond()
     {
         if (fov.canSeePlayer)
@@ -87,6 +104,7 @@ public class GrandpaMovement : MonoBehaviour
     private void Patrol() //walks to next waypoint
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        canTurn = false;
 
     }
     
@@ -107,7 +125,8 @@ public class GrandpaMovement : MonoBehaviour
         {
             waypointIndex = 0;
         }
-        transform.LookAt(waypoints[waypointIndex].position);
+
+
     }
     void DecreaseIndex()
     {
@@ -116,7 +135,6 @@ public class GrandpaMovement : MonoBehaviour
         {
             waypointIndex = 0;
         }
-        transform.LookAt(waypoints[waypointIndex].position);
     }
 
 }
