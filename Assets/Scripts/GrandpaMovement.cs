@@ -10,8 +10,10 @@ public class GrandpaMovement : MonoBehaviour
     public bool atPoint; //checks if grandpa is at a waypoint
     public Grandpa grandpa;
     public FieldOfView fov;
+    public SpawnManager spawnManager;
+    public Menu menu;
 
-    private int waypointIndex; //which waypoint in the list
+    public int waypointIndex; //which waypoint in the list
     private float dist; //distance from waypoint
     private int nextUpdate = 1;
 
@@ -20,7 +22,6 @@ public class GrandpaMovement : MonoBehaviour
     public bool playerDetected = false;
     public AudioSource death;
     public bool canTurn = false;
-
     private void Start()
     {
         
@@ -71,10 +72,13 @@ public class GrandpaMovement : MonoBehaviour
             grandpa.ResetGrandpa();
             grandpa.canThink = false;
             transform.LookAt(fov.player.transform);
-            
-            
-            
+            menu.gameOver = true;
+
+
+
+
         }
+        else menu.gameOver = false;
         if (Input.GetKey(KeyCode.H))
         {
             Debug.Log("yoda");

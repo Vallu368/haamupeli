@@ -6,6 +6,7 @@ public class CameraControl : MonoBehaviour
 {
     public float rotationSpeed = 1;
     public Transform root;
+    public Menu menu;
 
     float mouseX, mouseY;
 
@@ -16,7 +17,7 @@ public class CameraControl : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+
     }
     private void Update()
     {
