@@ -8,12 +8,15 @@ public class Menu : MonoBehaviour
     public GameObject blackScreen;
     public GameObject text;
     public GameObject restartButton;
-    public float fadeRate;
-    private float targetAlpha;
-    public SpawnManager spawnManager;
-    public bool cursorLock = true;
+    public GameObject taskList;
+    public float fadeRate; //how fast the black screen fades in and out
+    private float targetAlpha; //1 = blackscreen visible 0 = blackscreen not visible
+    public SpawnManager spawnManager; //for player respawning
+    public bool cursorLock = true; //if cursorlock = true you cant see the cursor or move it away from the game window
 
     public bool gameOver = false;
+
+    private bool taskListOpen = false;
     void Start()
     {
         cursorLock = true;
@@ -22,6 +25,22 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.I)) //opening the task menu
+        {
+            if (!taskListOpen)
+            {
+                taskList.SetActive(true);
+                cursorLock = false;
+                taskListOpen = true;
+            }
+            else if (taskListOpen) //closing task menu
+            {
+                taskList.SetActive(false);
+                cursorLock = true;
+                taskListOpen = false;
+            }
+        }
+        
         if (cursorLock == true)
         {
             Cursor.lockState = CursorLockMode.Locked;
