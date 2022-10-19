@@ -22,6 +22,7 @@ public class PlayerGrab : MonoBehaviour
             
             if (grabbedObj != null)
             {
+                Debug.Log("destroying fixedj");
                 Destroy(grabbedObj.GetComponent<FixedJoint>());
             }
 

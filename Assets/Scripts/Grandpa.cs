@@ -51,7 +51,7 @@ public class Grandpa : MonoBehaviour
         {
             grandpaWantsTo = "Turn";
         }
-        if (grandpaThinking >= 5)
+        if (grandpaThinking >= 1)
         {
             action = true;
         }
