@@ -56,8 +56,10 @@ public class PlayerGrab : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("touched smthinh");
         if(other.gameObject.CompareTag("Grabbable"))
         {
+            Debug.Log("yee");
             if (grabbing)
             {
                 Debug.Log("touched grabbable obj");

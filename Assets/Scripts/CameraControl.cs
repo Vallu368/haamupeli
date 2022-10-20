@@ -28,20 +28,15 @@ public class CameraControl : MonoBehaviour
     {
         mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
         mouseY -= Input.GetAxis("Mouse Y") * rotationSpeed;
-        mouseY = Mathf.Clamp(mouseY, -120, 60);
+        mouseY = Mathf.Clamp(mouseY, -60, 35);
 
         Quaternion rootRotation = Quaternion.Euler(mouseY, mouseX, 0);
 
-        if (Input.GetKey(KeyCode.Z))
-        {
-            root.rotation = rootRotation;
-        }
-        else
-        {
+        
             root.rotation = rootRotation;
             hipJoint.targetRotation = Quaternion.Euler(0, -mouseX, 0);
             //stomachJoint.targetRotation = Quaternion.Euler(-mouseY + stomachOffset, 0, 0);
-        }
+        
     }
 }
 

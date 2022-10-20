@@ -12,9 +12,16 @@ public class PlayerRagdollController : MonoBehaviour
     public bool isGrounded;
     public bool moving = false;
     public Animator anim;
+
+    private int nextUpdate = 1;
+
     void Start()
     {
-        hips = GetComponent<Rigidbody>();
+
+    }
+    private void Update()
+    {
+        
     }
     void FixedUpdate()
     {
@@ -26,15 +33,15 @@ public class PlayerRagdollController : MonoBehaviour
         moving = false;
         if (Input.GetKey(KeyCode.W))
         {
-            hips.AddForce(hips.transform.forward * speed);
+            hips.AddForce(-hips.transform.forward * speed);
             moving = true;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.D))
         {
             hips.AddForce(-hips.transform.right * strafeSpeed);
             moving = true;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.A))
         {
             hips.AddForce(hips.transform.right * strafeSpeed);
             moving = true;
@@ -42,7 +49,7 @@ public class PlayerRagdollController : MonoBehaviour
         
         if (Input.GetKey(KeyCode.S))
         {
-            hips.AddForce(-hips.transform.forward * speed);
+            hips.AddForce(hips.transform.forward * speed);
             moving = true;
         }
         
