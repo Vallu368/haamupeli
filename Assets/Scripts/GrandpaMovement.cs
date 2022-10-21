@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class GrandpaMovement : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class GrandpaMovement : MonoBehaviour
     public bool playerDetected = false;
     public AudioSource death;
     public bool canTurn = false;
+    public GameObject inSight;
     private void Start()
     {
         
@@ -62,7 +64,15 @@ public class GrandpaMovement : MonoBehaviour
         {
             playerInSight = 0;
         }
-        if (playerInSight >= 5)
+        if (playerInSight == 0)
+        {
+            inSight.SetActive(false);
+        }
+        if (playerInSight != 0)
+        {
+            inSight.SetActive(true);
+        }
+        if (playerInSight >= 4)
         {
             playerDetected = true;
         }
@@ -86,6 +96,7 @@ public class GrandpaMovement : MonoBehaviour
         }
         if (grandpa.grandpaWantsTo == "Turn")
         {
+            
             var targetRotation = Quaternion.LookRotation(waypoints[waypointIndex].transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
             if (transform.rotation == targetRotation)
@@ -127,8 +138,9 @@ public class GrandpaMovement : MonoBehaviour
         waypointIndex++;
         if(waypointIndex >= waypoints.Length)
         {
-            waypointIndex = 0;
+            waypointIndex = waypointIndex - 1;
         }
+        
 
 
     }

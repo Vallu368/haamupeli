@@ -25,6 +25,11 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (taskListOpen)
+        {
+            Time.timeScale = 0;
+        }
+        else Time.timeScale = 1;
         if (Input.GetKeyDown(KeyCode.I)) //opening the task menu
         {
             if (!taskListOpen)

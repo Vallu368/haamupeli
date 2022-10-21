@@ -14,6 +14,7 @@ public class Grandpa : MonoBehaviour
     public Animator anim;
     public bool hasTurned;
     private int nextUpdate = 1;
+    public string lastAction = "Null";
 
     void Start()
     {
@@ -50,9 +51,14 @@ public class Grandpa : MonoBehaviour
         if (random == 4)
         {
             grandpaWantsTo = "Turn";
+            if (lastAction == "Turn")
+            {
+                hasTurned = true;
+            }
         }
-        if (grandpaThinking >= 1)
+        if (grandpaThinking >= 2)
         {
+            lastAction = grandpaWantsTo;
             action = true;
         }
         else action = false;
@@ -87,7 +93,7 @@ public class Grandpa : MonoBehaviour
     }
     public void ResetGrandpa()
     {
-        //resetting grandpa
+        Debug.Log("Resetti Spaghetti");
         random = 0;
         hasTurned = false;
         canThink = true;

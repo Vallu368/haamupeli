@@ -21,7 +21,10 @@ public class CameraControl : MonoBehaviour
     }
     private void Update()
     {
-        CamControl();
+        if (Time.timeScale == 1)
+        {
+            CamControl();
+        }
     }
 
     void CamControl()
