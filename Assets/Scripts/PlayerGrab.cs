@@ -4,73 +4,60 @@ using UnityEngine;
 
 public class PlayerGrab : MonoBehaviour
 {
-    public Animator anim;
-    public GameObject grabbedObj;
-    public Rigidbody rb;
-    public int isLeftorRight;
-    public bool alreadyGrabbing = false;
-    public bool grabbing;
+    private bool hold;
+    public KeyCode grabKey;
+    public bool canGrab;
+    public Animator animator;
+    public bool RightHand;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
-    private void Update()
-    {
-        if (!grabbing)
+    void Update()
+    { 
+        if (canGrab) // if canGrab = true you can move arms
         {
-            
-            if (grabbedObj != null)
+            if (Input.GetKey(grabKey)) 
             {
-                Debug.Log("destroying fixedj");
-                Destroy(grabbedObj.GetComponent<FixedJoint>());
+                if (RightHand)
+                {
+                    animator.SetBool("RightHandUp", true);
+                }
+                else
+                {
+                    animator.SetBool("LeftHandUp", true);
+                }
+                hold = true;
             }
+            else
+            {
+                if (RightHand)
+                {
+                    animator.SetBool("RightHandUp", false);
+                }
+                else
+                {
+                    animator.SetBool("LeftHandUp", false);
+                }
 
-        }
-        if (Input.GetMouseButtonDown(isLeftorRight))
-        {
-            if(isLeftorRight == 0)
-            {
-                anim.SetBool("LeftHandUp", true);
+                hold = false;
+                Destroy(GetComponent<FixedJoint>());
             }
-            if(isLeftorRight == 1)
-            {
-                anim.SetBool("RightHandUp", true);
-            }
-            grabbing = true;
-            
-        } else if (Input.GetMouseButtonUp(isLeftorRight))
-        {
-            grabbing = false;
-            if (isLeftorRight == 0)
-            {
-                anim.SetBool("LeftHandUp", false);
-            }
-            if (isLeftorRight == 1)
-            {
-                anim.SetBool("RightHandUp", false);
-            }
-            
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision col)
     {
-        if(other.gameObject.CompareTag("Grabbable"))
+        if (hold && col.transform.tag != "Player") //can grab onto anything that isn't tagged Player
         {
-            if (grabbing)
+            Rigidbody rb = col.transform.GetComponent<Rigidbody>();
+            if (rb != null)
             {
-                Debug.Log("touched grabbable obj");
-                grabbedObj = other.gameObject;
-                FixedJoint fj = grabbedObj.AddComponent<FixedJoint>();
+                FixedJoint fj = transform.gameObject.AddComponent(typeof(FixedJoint)) as FixedJoint;
                 fj.connectedBody = rb;
-                fj.breakForce = 9001;
             }
-            
+            else
+            {
+                FixedJoint fj = transform.gameObject.AddComponent(typeof(FixedJoint)) as FixedJoint;
+            }
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        grabbedObj = null;
     }
 }
+
