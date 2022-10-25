@@ -46,8 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  playerPrefab: {fileID: 9154150127416223846, guid: 36c4b25519a8021478091377044b9ecb,
-    type: 3}
+  playerPrefab: {fileID: 0}
   playerSpawnPoint: {fileID: 0}
   grandpa: {fileID: 0}
   grandpaPrefab: {fileID: 8274350141014654787, guid: b7e46eb46d020e54b85e988ed4e94e94,
@@ -69,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tasks:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   tasksCompleted: 0

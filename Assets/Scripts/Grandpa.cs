@@ -56,7 +56,7 @@ public class Grandpa : MonoBehaviour
                 hasTurned = true;
             }
         }
-        if (grandpaThinking >= 2)
+        if (grandpaThinking >= 1)
         {
             lastAction = grandpaWantsTo;
             action = true;

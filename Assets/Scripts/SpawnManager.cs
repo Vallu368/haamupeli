@@ -12,6 +12,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject grandpaSpawnPoint;
     public GrandpaMovement grandpaMovement;
     public Grandpa grandpaScript;
+    public Menu menu;
     public bool reset = false;
 
     private void Start()
@@ -34,9 +35,10 @@ public class SpawnManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        
+        Debug.Log("peepoo");
         grandpaMovement.playerDetected = false;
-        player.transform.position = playerSpawnPoint.transform.position;
+        Vector3 pos = new Vector3(playerSpawnPoint.transform.position.x, playerSpawnPoint.transform.position.y, playerSpawnPoint.transform.position.z + 0.001f);
+        player.transform.position = pos;
         grandpaScript.ResetGrandpa();
         reset = false;
     }
