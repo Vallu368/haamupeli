@@ -7,9 +7,10 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public GameObject blackScreen;
-    public GameObject text;
     public GameObject restartButton;
     public GameObject taskList;
+    public GameObject text;
+    public GameObject inSight;
     public float fadeRate; //how fast the black screen fades in and out
     private float targetAlpha; //1 = blackscreen visible 0 = blackscreen not visible
     public SpawnManager spawnManager; //for player respawning
@@ -61,13 +62,15 @@ public class Menu : MonoBehaviour
     }
     public void Reset()
     {
+        Debug.Log("asdfasdas");
         gameOver = false;
         text.SetActive(false);
-        restartButton.SetActive(false);
+        //restartButton.SetActive(false);
         StartCoroutine(FadeOut());
     }
     IEnumerator FadeIn()
     {
+        fadeRate = 3;
         Debug.Log("fading to black");
         blackScreen.SetActive(true);
         targetAlpha = 1.0f;
@@ -76,16 +79,19 @@ public class Menu : MonoBehaviour
         {
             curColor.a = Mathf.Lerp(curColor.a, targetAlpha, fadeRate * Time.deltaTime);
             blackScreen.GetComponent<Image>().color = curColor;
-            
-            yield return null;
+
+            yield return null;  
         }
-        cursorLock = false;
-        spawnManager.RespawnPlayer();
         text.SetActive(true);
-        restartButton.SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+
+        //      cursorLock = false;
+        Reset();
     }
     IEnumerator FadeOut()
     {
+        spawnManager.RespawnPlayer();
         cursorLock = true;
         blackScreen.SetActive(true);
         targetAlpha = 0f;

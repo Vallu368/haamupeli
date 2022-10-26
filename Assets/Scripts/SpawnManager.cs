@@ -28,16 +28,19 @@ public class SpawnManager : MonoBehaviour
         grandpaScript = grandpa.GetComponent<Grandpa>();
         if (reset)
         {
-            Debug.Log("resetting");
-            RespawnPlayer();
+            playerSpawnPoint.SetActive(true);
         }
+        else playerSpawnPoint.SetActive(false);
+
+
     }
 
     public void RespawnPlayer()
     {
         Debug.Log("peepoo");
         grandpaMovement.playerDetected = false;
-        Vector3 pos = new Vector3(playerSpawnPoint.transform.position.x, playerSpawnPoint.transform.position.y, playerSpawnPoint.transform.position.z + 0.001f);
+        Vector3 pos = new Vector3(playerSpawnPoint.transform.position.x, playerSpawnPoint.transform.position.y, playerSpawnPoint.transform.position.z);
+        player.transform.Rotate(0, 0, 0, Space.Self);
         player.transform.position = pos;
         grandpaScript.ResetGrandpa();
         reset = false;

@@ -45,8 +45,10 @@ public class PlayerGrab : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (hold && col.transform.tag != "Player") //can grab onto anything that isn't tagged Player
+        
+        if (hold && col.transform.tag != "CantGrab") //can grab onto anything that isn't tagged Player
         {
+            Debug.Log("aaaaaa");
             Rigidbody rb = col.transform.GetComponent<Rigidbody>();
             if (rb != null)
             {

@@ -72,7 +72,7 @@ public class GrandpaMovement : MonoBehaviour
         {
             inSight.SetActive(true);
         }
-        if (playerInSight >= 4)
+        if (playerInSight >= 2)
         {
             playerDetected = true;
         }
@@ -126,7 +126,7 @@ public class GrandpaMovement : MonoBehaviour
     void Randomize() //picks a random number from 0 to 10, if above 5, walks to next waypoint, if less then to the last one
     {
         random = Random.Range(0, 10);
-        if (random >= 5)
+        if (random >= 2)
         {
             IncreaseIndex();
         }
