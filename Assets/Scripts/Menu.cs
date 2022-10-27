@@ -21,7 +21,8 @@ public class Menu : MonoBehaviour
     private bool taskListOpen = false;
     void Start()
     {
-        cursorLock = true;
+        cursorLock = false;
+        taskListOpen = true;
     }
 
     // Update is called once per frame

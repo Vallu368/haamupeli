@@ -20021,17 +20021,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 54f709646895dfd4a9d825f9c27d5bb9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.0032
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54f709646895dfd4a9d825f9c27d5bb9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54f709646895dfd4a9d825f9c27d5bb9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54f709646895dfd4a9d825f9c27d5bb9,
         type: 3}
@@ -27960,7 +27960,7 @@ PrefabInstance:
     - target: {fileID: 3112164721433800453, guid: 1b5ec9f244aa92442ba4781a3daf67cd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3112164721535215424, guid: 1b5ec9f244aa92442ba4781a3daf67cd,
         type: 3}
@@ -28125,8 +28125,9 @@ PrefabInstance:
     - target: {fileID: 8060748122759879907, guid: 1b5ec9f244aa92442ba4781a3daf67cd,
         type: 3}
       propertyPath: m_text
-      value: "Move with WASD\nGrab with mouse buttons\nSpace to jump\n\nObjectives
-        on the\n next page"
+      value: "Move with WASD\nGrab with mouse buttons\nSpace to jump\nPress I to
+        open and\n close the menu\n\n\nObjectives on the\n next page\nDONT LET THE
+        OLD MAN SEE YOU"
       objectReference: {fileID: 0}
     - target: {fileID: 8060748122759879907, guid: 1b5ec9f244aa92442ba4781a3daf67cd,
         type: 3}
