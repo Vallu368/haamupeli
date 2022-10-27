@@ -72,7 +72,7 @@ public class GrandpaMovement : MonoBehaviour
         {
             inSight.SetActive(true);
         }
-        if (playerInSight >= 2)
+        if (playerInSight >= 3)
         {
             playerDetected = true;
         }
