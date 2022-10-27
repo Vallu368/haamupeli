@@ -6,6 +6,7 @@ public class Objective : MonoBehaviour
 {
     public string myObjectiveName; //name of the gameobject you want to touch this objective marker with
     public GameObject objectiveModel; //model of the gameobject you want to appear
+    public GameObject outlineModel;
     public int objectiveNumber; //index number for the checkmark list in taskList script
     public bool objectiveUsed = false; //if true touching this objective marker doesnt do anything anymore
     public TaskList tl; 
@@ -25,6 +26,7 @@ public class Objective : MonoBehaviour
             {
                 Debug.Log("BOOP"); 
                 Destroy(collision.gameObject); //destroys held gameobject
+                outlineModel.SetActive(false);
                 objectiveModel.SetActive(true); //sets invisible model of the gameobject visible
                 objectiveUsed = true;
                 tl.lastTaskCompleted = objectiveNumber; //takes the objectivenumber to the tasklist script for the checkmark activation

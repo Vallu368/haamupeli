@@ -9,6 +9,7 @@ public class PlayerGrab : MonoBehaviour
     public bool canGrab;
     public Animator animator;
     public bool RightHand;
+    public AudioSource grabSound;
 
     void Update()
     { 
@@ -46,8 +47,9 @@ public class PlayerGrab : MonoBehaviour
     private void OnCollisionEnter(Collision col)
     {
         
-        if (hold && col.transform.tag != "CantGrab") //can grab onto anything that isn't tagged Player
+        if (hold && col.transform.tag != "CantGrab") //can grab onto anything that isn't tagged CantGrab
         {
+            grabSound.Play();
             Debug.Log("aaaaaa");
             Rigidbody rb = col.transform.GetComponent<Rigidbody>();
             if (rb != null)

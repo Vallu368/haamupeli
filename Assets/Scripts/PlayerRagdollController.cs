@@ -8,6 +8,7 @@ public class PlayerRagdollController : MonoBehaviour
     public float speed;
     public float strafeSpeed;
     public float jumpForce;
+    public AudioSource jumpSound;
 
     public Rigidbody hips;
     public bool isGrounded;
@@ -91,8 +92,9 @@ public class PlayerRagdollController : MonoBehaviour
         
         if (Input.GetKey(KeyCode.Space)  && canJump)
         {
-            if (isGrounded)
+            if (isGrounded) 
             {
+                jumpSound.Play();
                 hips.AddForce(new Vector3(0, jumpForce, 0));
                 isGrounded = false;
                 canJump = false;

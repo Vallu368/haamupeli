@@ -333,9 +333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a82f16ba9028544af05e149b356ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  strafeSpeed: 35
-  jumpForce: 1500
+  speed: 70
+  strafeSpeed: 70
+  jumpForce: 2200
+  jumpSound: {fileID: 0}
   hips: {fileID: 3673297738367682741}
   isGrounded: 0
   moving: 0
@@ -2403,6 +2404,7 @@ MonoBehaviour:
   canGrab: 1
   animator: {fileID: 3673297739101286418}
   RightHand: 0
+  grabSound: {fileID: 0}
 --- !u!114 &3673297739143026842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3309,6 +3311,7 @@ MonoBehaviour:
   canGrab: 1
   animator: {fileID: 3673297739101286418}
   RightHand: 1
+  grabSound: {fileID: 0}
 --- !u!1 &2918040255226297063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1910892876552221258, guid: 976c0abbe5684d248a4d161c52c6e7ba,

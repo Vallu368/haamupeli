@@ -62,11 +62,11 @@ public class Menu : MonoBehaviour
     }
     public void Reset()
     {
-        Debug.Log("asdfasdas");
-        gameOver = false;
-        text.SetActive(false);
+        ResetScene();
+        //gameOver = false;
+        //text.SetActive(false);
         //restartButton.SetActive(false);
-        StartCoroutine(FadeOut());
+      //  StartCoroutine(FadeOut());
     }
     IEnumerator FadeIn()
     {
