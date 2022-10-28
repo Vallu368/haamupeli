@@ -7713,6 +7713,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &796523556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5647780947220237123, guid: 32b1b3c31e8537b4e8fe788f53f8fb9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4801289139049330930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &796523559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796523556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.016412036, y: 0.055852592, z: 0.37318268}
+  m_Center: {x: 0.013476553, y: -0.0005167519, z: 0.13659026}
 --- !u!65 &798790169
 BoxCollider:
   m_ObjectHideFlags: 0
