@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 3673297739282270166}
   m_Layer: 8
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,14 +370,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3673297739282270164}
-  m_LocalRotation: {x: -1.4523718e-14, y: 0.9779741, z: -0.20872656, w: -9.965122e-16}
-  m_LocalPosition: {x: 0, y: 0.01332, z: 0.02259}
+  m_LocalRotation: {x: -3.6746348e-15, y: 0.96259284, z: -0.2709524, w: 1.4816229e-15}
+  m_LocalPosition: {x: -2.566812e-10, y: 0.009089993, z: 0.01150999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3673297739375935784}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 24.095, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 31.442, y: 180, z: 0}
 --- !u!20 &3673297739282270161
 Camera:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 3673297739375935791}
   m_Layer: 8
   m_Name: Root
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -524,7 +524,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1001 &3673297737618508166
@@ -547,7 +547,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
@@ -1594,6 +1594,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -8361273820761078871, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -7342585018662474880, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -1679,15 +1684,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -6321379762768419156, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -5911296430440606352, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5911296430440606352, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -5339301712063344527, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -5339301712063344527, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
-      propertyPath: m_Layer
-      value: 8
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: -5234448375175369897, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
@@ -1749,15 +1769,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -3722552069314111775, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -2854276242539317719, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -2854276242539317719, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -2092839563252741769, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -2092839563252741769, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
-      propertyPath: m_Layer
-      value: 8
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: -1745385294909147027, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
@@ -1793,6 +1828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1719866666920192412, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: -1252090209154404817, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
@@ -1864,6 +1904,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -340692928295203721, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -153796354489516860, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -1904,15 +1949,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1277572880833191795, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1790183945725220954, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790183945725220954, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910892876552221258, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1910892876552221258, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
-      propertyPath: m_Layer
-      value: 8
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2511411478203048409, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
@@ -1923,6 +1983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558884753778743084, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2750882767494945567, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
@@ -1968,6 +2033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283976636932391248, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3547498166885602161, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
@@ -2069,6 +2139,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4819001077394492298, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5119670687444277272, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -2134,10 +2209,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6905609870639353253, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7036213049465896255, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7229963676164362738, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
@@ -2154,10 +2239,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7383561504374303564, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7422901625332531545, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422901625332531545, guid: 976c0abbe5684d248a4d161c52c6e7ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7423471007143406618, guid: 976c0abbe5684d248a4d161c52c6e7ba,
         type: 3}
@@ -2275,7 +2370,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297739143026820
@@ -2438,7 +2533,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297737279655630
@@ -2584,7 +2679,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297738745407525
@@ -2730,7 +2825,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297739274401534
@@ -2876,7 +2971,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297738465359008
@@ -3022,7 +3117,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297739120187139
@@ -3168,7 +3263,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297738700266090
@@ -3331,7 +3426,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297738336625971
@@ -3477,7 +3572,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297739296974708
@@ -3629,7 +3724,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297739026211778
@@ -3775,7 +3870,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297737838950251
@@ -3934,7 +4029,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297738011723249
@@ -4080,7 +4175,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297738434489219
@@ -4226,7 +4321,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297737488077853
@@ -4372,7 +4467,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297737709585308
@@ -4524,7 +4619,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297737370461475
@@ -4670,7 +4765,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297738367682748
@@ -4816,7 +4911,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297737527986293
@@ -4962,7 +5057,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &3673297738660408798
