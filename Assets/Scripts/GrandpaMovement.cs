@@ -138,7 +138,7 @@ public class GrandpaMovement : MonoBehaviour
         waypointIndex++;
         if(waypointIndex >= waypoints.Length)
         {
-            waypointIndex = waypointIndex - 1;
+            waypointIndex = 0;
         }
         
 
