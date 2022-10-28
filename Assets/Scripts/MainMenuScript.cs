@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +11,10 @@ public class MainMenuScript : MonoBehaviour
     public GameObject mainMenu;
     public GameObject blackScreen;
     public GameObject cutsceneImage1;
-    public GameObject cutscene1Text;
+    public GameObject cutsceneImage2;
+    public GameObject cutsceneImage3;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,15 @@ public class MainMenuScript : MonoBehaviour
         StartCoroutine(FadeMainMenuToBlack());
         mainMenu.SetActive(false);
         
+    }
+    public void FadeOutCS1()
+    {
+        cutsceneImage1.SetActive(false);
+        StartCoroutine(FadeInCutscene2());
+    }
+    public void FadeOutCS2()
+    {
+        StartCoroutine(FadeInCutscene3());
     }
 
     void EndGame()
@@ -57,7 +69,7 @@ public class MainMenuScript : MonoBehaviour
         cutsceneImage1.SetActive(true);
 
         Debug.Log("cutsceneimg1");
-        fadeRate = 3f;
+        fadeRate = 2f;
         targetAlpha = 1.0f;
         Color curColor = cutsceneImage1.GetComponent<Image>().color;
         while (Mathf.Abs(curColor.a - targetAlpha) > 0.0001f)
@@ -68,12 +80,52 @@ public class MainMenuScript : MonoBehaviour
 
             yield return null;
         }
-        cutscene1Text.SetActive(true);
+        StartCoroutine(FadeInCutscene2());
     }
 
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    IEnumerator FadeInCutscene2()
+    {
+        cutsceneImage1.SetActive(false);
+        cutsceneImage2.SetActive(true);
+
+        Debug.Log("cutsceneimg2");
+        fadeRate = 2f;
+        targetAlpha = 1.0f;
+        Color curColor = cutsceneImage2.GetComponent<Image>().color;
+        while (Mathf.Abs(curColor.a - targetAlpha) > 0.0001f)
+        {
+            curColor.a = Mathf.Lerp(curColor.a, targetAlpha, fadeRate * Time.deltaTime);
+            cutsceneImage2
+                .GetComponent<Image>().color = curColor;
+
+            yield return null;
+        }
+        StartCoroutine(FadeInCutscene3());
+    }
+    IEnumerator FadeInCutscene3()
+    {
+        cutsceneImage2.SetActive(false);
+        cutsceneImage3.SetActive(true);
+
+        Debug.Log("cutsceneimg3");
+        fadeRate = 2f;
+        targetAlpha = 1.0f;
+        Color curColor = cutsceneImage3.GetComponent<Image>().color;
+        while (Mathf.Abs(curColor.a - targetAlpha) > 0.0001f)
+        {
+            curColor.a = Mathf.Lerp(curColor.a, targetAlpha, fadeRate * Time.deltaTime);
+            cutsceneImage3
+                .GetComponent<Image>().color = curColor;
+
+            yield return null;
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
+
 
 }
